@@ -1,0 +1,10 @@
+[tool.black]
+line_length = 100
+
+[tool.isort]
+line_length = 100
+multi_line_output = 3
+include_trailing_comma = true
+src_paths=['signalize', 'tests']
+skip=['signalize/database/__init__.py', 'signalize/database/strategies/__init__.py']
+known_third_party = 'pytest,mock'
