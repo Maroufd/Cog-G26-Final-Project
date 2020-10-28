@@ -1,6 +1,7 @@
-import pandas as pd
+from data_utils import extract_X_y
+from mlp import make_mlp
 
-hists = pd.read_csv("data/GOOD_histograms.csv", header=None, index_col=False)
-import pdb
 
-pdb.set_trace()
+if __name__ == "__main__":
+    X, y, preprocessor = extract_X_y("GOOD_histograms")
+    model = make_mlp(X, y)
