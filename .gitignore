@@ -8,3 +8,7 @@ __pycache__
 
 logs/*
 !logs/.gitkeep
+
+.DS_Store
+data/ESF_washington.csv
+data/GOOD_washington.csv
