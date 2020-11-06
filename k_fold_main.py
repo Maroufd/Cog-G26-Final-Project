@@ -10,7 +10,8 @@ from lvq import make_lvq
 from knn import make_knn
 
 if __name__ == "__main__":
-    X, y, preprocessor = extract_X_y("GOOD_restaurant")
+    dataset = "GOOD_restaurant"
+    X, y, preprocessor = extract_X_y(dataset)
 
     strat_split = StratifiedShuffleSplit(n_splits=10, test_size=0.1, random_state=42)
 
@@ -28,4 +29,4 @@ if __name__ == "__main__":
         results.append({"run": i, "model": "knn", "score": accuracy_score(np.argmax(mlp.predict(X_test), axis=-1), y_classes)})
         results.append({"run": i, "model": "knn", "score": accuracy_score(lvq.predict(X_test), y_classes)})
 
-    pd.DataFrame(results).to_csv("k_fold_results.csv")
+    pd.DataFrame(results).to_csv(f"results/k_fold_results_{dataset}.csv")

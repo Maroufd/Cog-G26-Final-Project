@@ -15,3 +15,10 @@ def make_knn(X, y):
     clf = KNeighborsClassifier(n_neighbors=1, metric=bhattacharyya)
     clf.fit(X, y)
     return clf
+
+
+class OpenEndedKNN:
+
+    def continue_fit(self, X, y):
+        self.model = KNeighborsClassifier(n_neighbors=1, metric=bhattacharyya)
+        self.model.fit(X, y)
