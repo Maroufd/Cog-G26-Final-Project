@@ -12,3 +12,6 @@ LVQ
 https://github.com/MathewStylianidis/LVQ1_Classifier
 
 https://towardsdatascience.com/learning-vector-quantization-ed825f8c807d
+
+[DEN](https://github.com/jaehong-yoon93/DEN): (paper)
+https://openreview.net/pdf?id=Sk7KsfW0-
