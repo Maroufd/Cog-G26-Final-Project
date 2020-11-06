@@ -12,3 +12,5 @@ logs/*
 .DS_Store
 data/ESF_washington.csv
 data/GOOD_washington.csv
+data/mobilenetv2_washington.csv
+data/resnet50_washington.csv
