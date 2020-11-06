@@ -1,6 +1,5 @@
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
-from bhatta_dist import bhatta_dist
 
 
 def bhattacharyya(h1, h2):
