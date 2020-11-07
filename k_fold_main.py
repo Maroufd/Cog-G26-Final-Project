@@ -26,7 +26,7 @@ if __name__ == "__main__":
         lvq = make_lvq(X_train, y_train)
 
         results.append({"run": i, "model": "knn", "score": accuracy_score(np.argmax(knn.predict(X_test), axis=-1), y_classes)})
-        results.append({"run": i, "model": "knn", "score": accuracy_score(np.argmax(mlp.predict(X_test), axis=-1), y_classes)})
-        results.append({"run": i, "model": "knn", "score": accuracy_score(lvq.predict(X_test), y_classes)})
+        results.append({"run": i, "model": "mlp", "score": accuracy_score(np.argmax(mlp.predict(X_test), axis=-1), y_classes)})
+        results.append({"run": i, "model": "lvq", "score": accuracy_score(lvq.predict(X_test), y_classes)})
 
     pd.DataFrame(results).to_csv(f"results/k_fold_results_{dataset}.csv")
