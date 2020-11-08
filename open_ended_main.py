@@ -34,7 +34,7 @@ def add_old_cats(dataset, old_classes, min_cats, cls_X, cls_y):
 
 
 def open_ended_experiment():
-    type = "mlp"
+    type = "knn"
     dataset = "ESF_washington"
     test_size = .2
     X, y, preprocessor = extract_X_y(dataset)
