@@ -21,7 +21,7 @@ def make_knn(X, y):
 
 class OpenEndedKNN:
 
-    def first_fit(self, X, y):
+    def first_fit(self, X, y, class_map):
         self.model = KNeighborsClassifier(n_neighbors=1, metric=bhattacharyya)
         self.model.fit(X, y.ravel())
         self.prev_X, self.prev_y = X, y.ravel()
