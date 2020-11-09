@@ -20,7 +20,7 @@ if __name__ == "__main__":
             "clf_time": "Classification time",
             "train_time": "Retrain time",
         },
-        inplace=True
+        inplace=True,
     )
     mlp.rename(
         columns={
@@ -29,7 +29,7 @@ if __name__ == "__main__":
             "clf_time": "Classification time",
             "train_time": "Retrain time",
         },
-        inplace=True
+        inplace=True,
     )
 
     ax = sns.lineplot(x="Number of classes", y="Accuracy", data=knn, label="KNN")
@@ -47,4 +47,6 @@ if __name__ == "__main__":
     sns.lineplot(x="Number of classes", y="Retrain time", data=mlp, ax=ax, label="MLP")
     plt.legend()
     plt.show()
-    import pdb; pdb.set_trace()
+    import pdb
+
+    pdb.set_trace()

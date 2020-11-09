@@ -7,6 +7,7 @@ def extract_X_y(csv_name):
     Reads in csv data, returns inputs and labels one hot encoded and the preprocessor.
 
     :param csv_name: the name of csv file to load (without extension)
+    :returns: inputs, one hot encoded labels and the corresponding preprocessor
     """
 
     hists = pd.read_csv(f"data/{csv_name}.csv", header=None, index_col=False)
